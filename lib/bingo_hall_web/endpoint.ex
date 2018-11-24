@@ -36,7 +36,7 @@ defmodule BingoHallWeb.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_bingo_hall_key",
-    signing_salt: "zGYewTww"
+    signing_salt: "8/rsD14y"
 
   plug BingoHallWeb.Router
 

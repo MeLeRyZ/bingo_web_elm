@@ -10,17 +10,18 @@ defmodule BingoHallWeb.Router do
   end
 
   pipeline :api do
-    plug :accepts, ["json"]
+    plug :accepts, ["json"]    
   end
 
   scope "/", BingoHallWeb do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", GameController, :new
+
+    resources "/games", GameController, 
+                        only: [:new, :create, :show]
+
+    resources "/sessions", SessionController, 
+                           only: [:new, :create, :delete],                      singleton: true
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", BingoHallWeb do
-  #   pipe_through :api
-  # end
 end

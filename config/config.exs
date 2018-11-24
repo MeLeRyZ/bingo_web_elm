@@ -6,8 +6,8 @@
 use Mix.Config
 
 # General application configuration
-config :bingo_hall,
-  ecto_repos: [BingoHall.Repo]
+# config :bingo_hall,
+#   ecto_repos: [BingoHall.Repo]
 
 # Configures the endpoint
 config :bingo_hall, BingoHallWeb.Endpoint,

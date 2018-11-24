@@ -8,10 +8,9 @@ defmodule BingoHall.Application do
 
     # Define workers and child supervisors to be supervised
     children = [
-      # Start the Ecto repository
-      supervisor(BingoHall.Repo, []),
       # Start the endpoint when the application starts
       supervisor(BingoHallWeb.Endpoint, []),
+      supervisor(BingoHall.Presence, [])
       # Start your own worker by calling: BingoHall.Worker.start_link(arg1, arg2, arg3)
       # worker(BingoHall.Worker, [arg1, arg2, arg3]),
     ]
