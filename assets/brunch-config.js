@@ -56,7 +56,7 @@ exports.config = {
       mainModules: ["src/Bingo.elm"],
       outputFolder: "../js",
       outputFile: 'bingo.js',
-      // makeParameters: ["--warn", "--debug"]
+      makeParameters: ["--warn", "--debug"]
     }
   },
 
