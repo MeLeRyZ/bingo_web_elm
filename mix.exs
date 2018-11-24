@@ -38,11 +38,8 @@ defmodule BingoHall.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      
-      {:bingo, path: "../bingo"}
 
-      # {:bingo, "~> 1.0"}
-      # {:bingo, git: "https://github.com/username/bingo.git"}
+      {:bingo, git: "https://github.com/MeLeRyZ/bingo_otp.git"}
       # {:bingo, git: "git@github.com:username/bingo.git"}
       # {:bingo, in_umbrella: true}
     ]
