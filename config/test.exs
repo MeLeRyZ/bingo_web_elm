@@ -8,12 +8,3 @@ config :bingo_hall, BingoHallWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
-
-# Configure your database
-config :bingo_hall, BingoHall.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "bingo_hall_test",
-  hostname: "localhost",
-  pool: Ecto.Adapters.SQL.Sandbox

@@ -23,15 +23,15 @@ defmodule BingoHallWeb.ConnCase do
 
       # The default endpoint for testing
       @endpoint BingoHallWeb.Endpoint
+
+      def put_player_in_session(conn, name, color \\ "blue") do
+        params = %{"name" => name, "color" => color}
+        post conn, session_path(conn, :create), %{"player" => params }
+      end
     end
   end
 
-
-  setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(BingoHall.Repo)
-    unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(BingoHall.Repo, {:shared, self()})
-    end
+  setup _tags do
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 

@@ -5,14 +5,10 @@
 # is restricted to this project.
 use Mix.Config
 
-# General application configuration
-# config :bingo_hall,
-#   ecto_repos: [BingoHall.Repo]
-
 # Configures the endpoint
 config :bingo_hall, BingoHallWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "tjNmdgO5NgBpxctMzKwVaK51lO2D99VyiR/uySeAM8xiV04HxOhy7+KVc/MCarHH",
+  secret_key_base: "Qy3QVMlSDVaTrBy9uQUzIIWui9PattF1dDgb4/G5s8t6pTR/fOYWXMC7n1+boUKn",
   render_errors: [view: BingoHallWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: BingoHall.PubSub,
            adapter: Phoenix.PubSub.PG2]

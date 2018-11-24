@@ -16,10 +16,14 @@ use Mix.Config
 config :bingo_hall, BingoHallWeb.Endpoint,
   load_from_system_env: true,
   url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  secret_key_base: Map.fetch!(System.get_env(), "SECRET_KEY_BASE")
 
 # Do not print debug messages in production
 config :logger, level: :info
+
+config :bingo_hall, BingoHallWeb.Endpoint,
+  ws_url: "wss://slow-roast-12345.herokuapp.com/socket/websocket"
 
 # ## SSL Support
 #
@@ -62,3 +66,4 @@ config :logger, level: :info
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
 import_config "prod.secret.exs"
+
